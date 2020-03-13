@@ -1,5 +1,5 @@
 /*
-100 doors
+Rosetta Code: 100 doors
 
 There are 100 doors in a row that are all initially closed.
 You make 100 passes by the doors.
