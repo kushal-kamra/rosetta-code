@@ -12,34 +12,27 @@ function getFinalOpenedDoors() {
 
     let allDoors = [];
   
-  // Creating Closed Doors
+    // Creating Closed Doors
     for (let i = 0; i < 100; i++) {
       allDoors[i] = false;
     }
-
-    console.log(allDoors);
   
+    //Iterating in specified Logic
     for (let i = 1; i <= 100; i++) {
       for (let j = i-1; j < 100; j+=i) {
         allDoors[j] = !allDoors[j];
       }
     }
-  
-    for (let i = 0; i < 100; i++) {
-      if (allDoors[i]) {
-        allDoors[i] = i+1;
-      }
-    }
-  
+    
+    //Creating Open Door Array
     let openDoors = [];
   
-    for (let door of allDoors) {
-      if (door) {
-        openDoors.push(door);
+    //Populating openDoors with Door No.
+    for (let i = 0; i < 100; i++) {
+      if (allDoors[i]) {
+        openDoors.push(i+1);
       }
     }
-    
-    console.log(openDoors);
   
     return openDoors;
   }
